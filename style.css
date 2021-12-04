@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 3rem 1.5rem;
+  background-color: var(--Light-Gray);
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  /* Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  /* Neutral */
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(3, 15rem);
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0px 2px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 0.3rem;
+}
+
+article {
+  padding: 1.5rem;
+}
+
+.first-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.first-article h1 {
+  color: var(--Cyan);
+}
+.first-article h3 {
+  color: var(--Bright-Yellow);
+}
+.first-article p {
+  color: var(--Grayish-Blue);
+}
+
+.second-article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--Cyan);
+}
+.second-article h1 {
+  color: whitesmoke;
+}
+.second-article .price {
+  display: flex;
+  align-items: center;
+}
+.second-article .price h2 {
+  width: 4rem;
+  color: white;
+}
+.second-article .price p {
+  color: var(--Light-Gray);
+  opacity: 0.6;
+}
+.second-article p {
+  color: whitesmoke;
+}
+.second-article button {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--Bright-Yellow);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0px 2px 10px rgba(0, 0, 0, 0.12);
+  border: none;
+  border-radius: 0.4rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+.third-article {
+  background-color: #59c5c3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.third-article h1 {
+  color: white;
+}
+.third-article p {
+  color: whitesmoke;
+  opacity: 0.8;
+  width: 13rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media (min-width: 1440px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 50rem;
+  }
+
+  .first-article {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  article {
+    padding: 3rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
